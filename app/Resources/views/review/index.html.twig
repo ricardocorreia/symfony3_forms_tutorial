@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h4>Please review our latest product</h4>
+
+    {% for label, messages in app.flashes(['error', 'success']) %}
+        {% for message in messages %}
+        <div class="confirmation-container">
+            {% if label == "success" %}
+            <span class="confirmation">
+                <span class="fa fa-check-circle-o"></span>
+            {% else %}
+            <span class="error_confirmation">
+                <span class="fa fa-times-circle"></span>
+            {% endif %}
+                <span>{{ message }}</span> 
+            </span>
+        </div>
+        {% endfor %}
+    {% endfor %}
+    
+    {{ form_start(form) }}
+    <div class="form_field">
+        {{ form_label(form.name, 'Name', {'label_attr': {'class': 'label'} }) }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+    </div>
+    <div class="form_field">
+        {{ form_label(form.email, 'Email address', {'label_attr': {'class': 'label'} }) }}
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+    </div>
+    <div class="form_field">
+        {{ form_label(form.satisfaction, 'Satisfaction', {'label_attr': {'class': 'label'} }) }}
+        {{ form_errors(form.satisfaction) }}
+        {{ form_widget(form.satisfaction) }}
+    </div>
+    <div class="form_field">
+        {{ form_label(form.quality, 'Product quality', {'label_attr': {'class': 'label'} }) }}
+        {{ form_errors(form.quality) }}
+        {{ form_widget(form.quality) }}
+    </div>
+    <div class="form_field">
+        {{ form_label(form.review, 'Your review', {'label_attr': {'class': 'label'} }) }}
+        {{ form_errors(form.review) }}
+        {{ form_widget(form.review) }}
+    </div>
+    <div class="form_field_recaptcha">
+        {{ form_errors(form.recaptcha) }}
+        {{ form_widget(form.recaptcha) }}
+    </div>
+    <div class="form_field_submit">
+        {{ form_widget(form.submit) }}
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}

@@ -30,6 +30,8 @@ framework:
     assets: ~
     php_errors:
         log: true
+    templating:
+        engines: ['twig']
 
 # Twig Configuration
 twig:
@@ -65,3 +67,8 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+ewz_recaptcha:
+    public_key:  '%ewz_recaptcha_public_key%'
+    private_key: '%ewz_recaptcha_private_key%'
+    locale_key:  '%kernel.default_locale%'

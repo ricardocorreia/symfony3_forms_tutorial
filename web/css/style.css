@@ -1,0 +1,193 @@
+/*--------------------------------------------*/
+/* Main CSS                                  */
+/*--------------------------------------------*/
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#container {
+    display: block;
+    position: relative;
+    background-color: #FFF;
+    width: 800px;
+    min-height: 100%;
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    box-shadow: 0px 10px 15px 3px rgba(0,0,0,0.4);
+    text-align: center;
+    vertical-align: middle;
+}
+/*--------------------------------------------*/
+/* Header                                       */
+/*--------------------------------------------*/
+
+#container #header {
+    display: block;
+    background-color: #CCC;
+    width: 800px;
+    height: 150px;
+}
+
+#container #header p {
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    line-height: 150px;
+    font-size: 40px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: -2px -1px #666;
+}
+
+/*--------------------------------------------*/
+/* Body                                       */
+/*--------------------------------------------*/
+
+
+#container #body {
+    display: block;
+    position:relative;
+    padding: 15px 20px 30px 20px;
+    background-color: #FFF;
+    height: auto;
+    text-align: left;
+}
+
+#container #body form {
+    margin: 30px 0px 50px 0px;
+}
+
+#container #body form .label {
+    display: inline-block;
+    margin: 15px 15px 0px 0px;
+    padding: 0px;
+}
+
+input {
+    display: block;
+    width: 50%;
+    height: 30px;
+}
+
+#container #body form textarea {
+    display: block;
+    margin-bottom: 20px!important;
+    width: 100%;
+    height: 250px;
+    resize: none!important;
+}
+
+#container #body form .g-recaptcha {
+    display: table;
+    margin: 5px auto 5px auto;
+}
+
+#container #body form .form_field_recaptcha {
+    text-align: center;
+}
+
+#container #body form ul
+{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+    margin: 0px;
+    padding: 13px 0px 0px 0px!important;
+    color: #B0413E;
+}
+
+#container #body form ul li
+{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px 10px 0px 0px;
+}
+
+#container #body form #submit {
+    display: table;
+    margin: 20px auto 5px auto;
+}
+
+/*--------------------------------------------*/
+/* Form post confirmation                     */
+/*--------------------------------------------*/
+
+#container #body .confirmation
+{
+    display: table;
+    position: relative;
+    padding: 8px 15px 15px 15px;
+    background: rgba(0,158,45,0.5);
+    color: #FFF;
+    text-align: center;
+    margin: 50px auto 0px auto;
+    width: auto;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+#container #body .confirmation span, .error_confirmation span
+{
+    display: inline-block;
+}
+
+#container #body .confirmation .fa, .error_confirmation .fa
+{
+    position: relative;
+    top: 3px;
+    color: #FFF;
+    font-size: 25px;
+    text-shadow: -1px -1px #666;
+    padding-right: 8px;
+}
+
+#container #body .error_confirmation
+{
+    display: table;
+    position: relative;
+    padding: 8px 15px 15px 15px;
+    background: rgba(200,0,0,0.5);
+    color: #FFF;
+    text-align: center;
+    margin: 50px auto 0px auto;
+    width: auto;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+
+#container #body .confirmation p, .error_confirmation p
+{
+    font-size: 18px;
+}
+
+/*--------------------------------------------*/
+/* Footer                                     */
+/*--------------------------------------------*/
+
+#container #footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: #CCC;
+    width: 800px;
+    height: 50px;
+}
+
+#container #footer p {
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: -1px -1px #000;
+}
