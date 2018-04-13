@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h4>Our reviews</h4>
+    <div id="reviews">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Satisfaction</th>
+                    <th scope="col">Quality</th>
+                    <th scope="col">Review</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for review in reviews %}
+                <tr>
+                    <td>{{ review.id }}</td>
+                    <td>{{ review.name }}</td>
+                    <td>{{ review.email }}</td>
+                    <td>{{ review.satisfaction }}</td>
+                    <td>{{ review.quality }}</td>
+                    <td>{{ review.review }}</td>
+                </tr>
+                {% endfor %}
+                {% if reviews|length == 0 %}
+                    <tr>
+                        <td align="center" colspan="5">There are currently no reviews.</td>
+                    <tr>
+                {%endif %}
+            </tbody>
+      </table>
+    </div>
+    
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}

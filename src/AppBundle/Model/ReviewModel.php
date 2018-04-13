@@ -32,12 +32,12 @@ class ReviewModel {
     public $email;
     
     /**
-     * @Assert\NotNull()
+     * @Assert\Range(min = 1, max = 5)
      */
     public $satisfaction;
     
     /**
-     * @Assert\NotNull()
+     * @Assert\Range(min = 1, max = 5)
      */
     public $quality;
     

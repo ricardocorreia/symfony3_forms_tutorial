@@ -72,4 +72,11 @@ class ReviewService {
         return $review;
     }
     
+    public function listReviews()
+    {
+        $reviews = $this->entityManager->getRepository(Review::class)->findReviews();
+        
+        return $reviews;
+    }
+    
 }

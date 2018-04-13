@@ -49,6 +49,4 @@ class ReviewType extends AbstractType
     {
         return '';
     }
-
-
 }

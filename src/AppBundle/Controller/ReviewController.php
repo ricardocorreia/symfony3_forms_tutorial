@@ -60,4 +60,17 @@ class ReviewController extends Controller
         ]); 
         
     }
+    
+    /**
+     * @Route("/list", name="list")
+     */
+    public function listAction(Request $request)
+    {
+        $reviews = $this->reviewService->listReviews();
+        
+        return $this->render('review/list.html.twig', [
+            'reviews' => $reviews
+        ]); 
+        
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Review;
 use Doctrine\ORM\EntityRepository;
 
 class ReviewRepository extends EntityRepository
@@ -17,7 +18,8 @@ class ReviewRepository extends EntityRepository
         $query = $this->getEntityManager()
             ->createQuery(
                 "SELECT r "
-                . "FROM AppBundle:Review r"
+                . "FROM AppBundle:Review r "
+                . "ORDER BY r.id DESC"
             );
         return $query->getResult();
     }
