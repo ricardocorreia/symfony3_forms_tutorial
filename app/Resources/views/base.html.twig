@@ -13,9 +13,14 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+
         <div id="container">
             <div id="header"><p>My Awesome Site!</p></div>
-            <div id="body">
+            <div id="menu">
+                <a href="/">Create review</a>
+                <span> | </span>
+                <a href="list">List reviews</a>
+            </div>            <div id="body">
                 {% block body %}{% endblock %}
             </div>
             <div id="footer"><p>Developed by cleverti</p></div>

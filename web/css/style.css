@@ -1,5 +1,5 @@
 /*--------------------------------------------*/
-/* Main CSS                                  */
+/* Main CSS                                   */
 /*--------------------------------------------*/
 
 body, html {
@@ -22,8 +22,27 @@ body, html {
     text-align: center;
     vertical-align: middle;
 }
+
 /*--------------------------------------------*/
-/* Header                                       */
+/* Menu                                       */
+/*--------------------------------------------*/
+
+#menu a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #666;
+}
+
+#menu span {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #CCC;
+}
+
+/*--------------------------------------------*/
+/* Header                                     */
 /*--------------------------------------------*/
 
 #container #header {
