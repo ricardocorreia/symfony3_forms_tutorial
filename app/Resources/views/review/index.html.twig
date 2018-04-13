@@ -23,12 +23,12 @@
     <div class="form_field">
         {{ form_label(form.name, 'Name', {'label_attr': {'class': 'label'} }) }}
         {{ form_errors(form.name) }}
-        {{ form_widget(form.name) }}
+        {{ form_widget(form.name, {'attr': {'maxlength': 150}}) }}
     </div>
     <div class="form_field">
         {{ form_label(form.email, 'Email address', {'label_attr': {'class': 'label'} }) }}
         {{ form_errors(form.email) }}
-        {{ form_widget(form.email) }}
+        {{ form_widget(form.email, {'attr': {'placeholder': '(optional)', 'maxlength': 254}}) }}
     </div>
     <div class="form_field">
         {{ form_label(form.satisfaction, 'Satisfaction', {'label_attr': {'class': 'label'} }) }}
@@ -43,7 +43,7 @@
     <div class="form_field">
         {{ form_label(form.review, 'Your review', {'label_attr': {'class': 'label'} }) }}
         {{ form_errors(form.review) }}
-        {{ form_widget(form.review) }}
+        {{ form_widget(form.review, {'attr': {'maxlength': 1000}}) }}
     </div>
     <div class="form_field_recaptcha">
         {{ form_errors(form.recaptcha) }}
