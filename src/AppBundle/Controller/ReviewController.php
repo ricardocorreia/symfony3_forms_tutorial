@@ -35,6 +35,8 @@ class ReviewController extends Controller
     {
         $form = $this->createForm(ReviewType::class);
         $postedData = null;
+        // Flashbag cleanup
+        $request->getSession()->getFlashBag()->clear();
         
         if ($request->getMethod() == "POST") {
             $postedData = new ReviewModel();
