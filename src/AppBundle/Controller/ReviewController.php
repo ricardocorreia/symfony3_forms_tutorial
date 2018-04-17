@@ -16,12 +16,13 @@ class ReviewController extends Controller
 
     /**
      * @param ReviewService $reviewService
-     * 
+     *
      * @return self
-     * 
+     *
      * @required
      */
-    function setReviewService(ReviewService $reviewService) {
+    public function setReviewService(ReviewService $reviewService)
+    {
         $this->reviewService = $reviewService;
         
         return $this;
@@ -35,8 +36,7 @@ class ReviewController extends Controller
         $form = $this->createForm(ReviewType::class);
         $postedData = null;
         
-        if($request->getMethod() == "POST")
-        {
+        if ($request->getMethod() == "POST") {
             $postedData = new ReviewModel();
             $form = $this->createForm(ReviewType::class, $postedData);
             $form->handleRequest($request);
@@ -48,7 +48,7 @@ class ReviewController extends Controller
                 $this->addFlash('success', 'Your review has been delivered successfuly.');
                 // Clear the form, since the data was submitted correctly
                 $form = $this->createForm(ReviewType::class);
-            }else{
+            } else {
                 $postedData = null;
                 // Set error message
                 $this->addFlash('error', 'There are errors with your submission. Please solve the errors, and try again.');
@@ -57,8 +57,7 @@ class ReviewController extends Controller
         
         return $this->render('review/index.html.twig', [
             'form' => $form->createView()
-        ]); 
-        
+        ]);
     }
     
     /**
@@ -70,7 +69,6 @@ class ReviewController extends Controller
         
         return $this->render('review/list.html.twig', [
             'reviews' => $reviews
-        ]); 
-        
+        ]);
     }
 }

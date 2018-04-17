@@ -5,7 +5,8 @@ namespace AppBundle\Model;
 use Symfony\Component\Validator\Constraints as Assert;
 use EWZ\Bundle\RecaptchaBundle\Validator\Constraints as Recaptcha;
 
-class ReviewModel {
+class ReviewModel
+{
 
     /**
      * @Assert\NotNull(message = "The name can't be empty.")
@@ -57,56 +58,68 @@ class ReviewModel {
      */
     public $recaptcha;
     
-    public function __construct() {
-        
+    public function __construct()
+    {
     }
     
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function getRecaptcha() {
+    public function getRecaptcha()
+    {
         return $this->recaptcha;
     }
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function setEmail($email) {
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
 
-    public function setRecaptcha($recaptcha) {
+    public function setRecaptcha($recaptcha)
+    {
         $this->recaptcha = $recaptcha;
     }
     
-    public function getSatisfaction() {
+    public function getSatisfaction()
+    {
         return $this->satisfaction;
     }
 
-    public function setSatisfaction($satisfaction) {
+    public function setSatisfaction($satisfaction)
+    {
         $this->satisfaction = $satisfaction;
     }
     
-    public function getQuality() {
+    public function getQuality()
+    {
         return $this->quality;
     }
 
-    public function setQuality($quality) {
+    public function setQuality($quality)
+    {
         $this->quality = $quality;
     }
     
-    public function getReview() {
+    public function getReview()
+    {
         return $this->review;
     }
 
-    public function setReview($review) {
+    public function setReview($review)
+    {
         $this->review = $review;
     }
 }

@@ -7,7 +7,8 @@ use AppBundle\Entity\Review;
 use AppBundle\Model\ReviewModel;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class ReviewService {
+class ReviewService
+{
     
     /**
      * @var EntityManagerInterface
@@ -21,12 +22,13 @@ class ReviewService {
     
     /**
      * @param EntityManagerInterface $entityManager
-     * 
+     *
      * @return self
-     * 
+     *
      * @required
      */
-    function setEntityManager(EntityManagerInterface $entityManager) {
+    public function setEntityManager(EntityManagerInterface $entityManager)
+    {
         $this->entityManager = $entityManager;
         
         return $this;
@@ -34,22 +36,23 @@ class ReviewService {
     
     /**
      * @param RequestStack $requestStack
-     * 
+     *
      * @return self
-     * 
+     *
      * @required
      */
-    function setRequestStack(RequestStack $requestStack) {
+    public function setRequestStack(RequestStack $requestStack)
+    {
         $this->requestStack = $requestStack;
         
         return $this;
-    }    
+    }
     
     /**
      * Creates a review from the contact form, and store it.
      *
      * @param ReviewModel $reviewModel The content of the form
-     * 
+     *
      * @return Review The created object
      */
     public function createReview(ReviewModel $reviewModel)
@@ -78,5 +81,4 @@ class ReviewService {
         
         return $reviews;
     }
-    
 }

@@ -16,3 +16,4 @@
 /vendor/
 /web/bundles/
 /nbproject/
+.php_cs.cache

@@ -10,7 +10,7 @@ class ReviewRepository extends EntityRepository
     
     /**
      * Queries the existing reviews.
-     * 
+     *
      * @return array The list of reviews
      */
     public function findReviews()

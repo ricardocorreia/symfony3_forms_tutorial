@@ -5,14 +5,14 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ReviewRepository")
  * @ORM\HasLifecycleCallbacks
  * @ORM\Table(name="`review`")
  */
 
-class Review {
+class Review
+{
     
     /**
      * @ORM\Column(name="id", type="integer")
@@ -64,70 +64,87 @@ class Review {
     protected $review;
 
     
-    public function __construct() {
+    public function __construct()
+    {
     }
     
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getDate() {
+    public function getDate()
+    {
         return $this->date;
     }
 
-    public function getIpAddress() {
+    public function getIpAddress()
+    {
         return $this->ipAddress;
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function getSatisfaction() {
+    public function getSatisfaction()
+    {
         return $this->satisfaction;
     }
 
-    public function getQuality() {
+    public function getQuality()
+    {
         return $this->quality;
     }
 
-    public function getReview() {
+    public function getReview()
+    {
         return $this->review;
     }
 
-    public function setId($id) {
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function setDate($date) {
+    public function setDate($date)
+    {
         $this->date = $date;
     }
 
-    public function setIpAddress($ipAddress) {
+    public function setIpAddress($ipAddress)
+    {
         $this->ipAddress = $ipAddress;
     }
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function setEmail($email) {
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function setSatisfaction($satisfaction) {
+    public function setSatisfaction($satisfaction)
+    {
         $this->satisfaction = $satisfaction;
     }
 
-    public function setQuality($quality) {
+    public function setQuality($quality)
+    {
         $this->quality = $quality;
     }
 
-    public function setReview($review) {
+    public function setReview($review)
+    {
         $this->review = $review;
     }
 }
