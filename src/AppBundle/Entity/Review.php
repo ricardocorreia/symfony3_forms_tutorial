@@ -28,19 +28,19 @@ class Review
     protected $date;
     
     /**
-     * @ORM\Column(name="ip_address", type="text", nullable=false)
+     * @ORM\Column(name="ip_address", type="string", length=45, nullable=false)
      * @Assert\Length(min=8, max=45)
      */
     protected $ipAddress;
     
     /**
-     * @ORM\Column(name="name", type="text", nullable=false)
+     * @ORM\Column(name="name", type="string", length=150, nullable=false)
      * @Assert\Length(min=3, max=150)
      */
     protected $name;
     
     /**
-     * @ORM\Column(name="email", type="text", nullable=true)
+     * @ORM\Column(name="email", type="string", length=254, nullable=true)
      * @Assert\Length(min=6, max=254)
      */
     protected $email;
